@@ -23,11 +23,11 @@ def call(){
 
 					if(params.buildTool == 'gradle')
 					{
-					   gradle(BranchName)
+					   gradle(BranchName())
 					}
 					else
 					{
-					    maven(BranchName)
+					    maven(BranchName())
 					}
 				}
 			}
