@@ -21,7 +21,7 @@ def call(){
 				script{				    
 					println "Pipeline"
 
-					if(params.builTools == 'gradle')
+					if(params.buildTool == 'gradle')
 					{
 					    def ejecucion = load 'gradle.groovy'
 	                                    ejecucion.call()
