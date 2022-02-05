@@ -83,7 +83,13 @@ def call(String pipeliType){
                 }
         }
         
-        
+        if(env.GIT_BRANCH == 'develop'){
+            figlet 'gitCreateRelease'
+            bat "git checkout -b release"
+            bat "git add ."
+            bat "git commit -m 'se agregar nueva rama'"
+            bat "git push origin release" 
+        }
         
         if(str.contains('sonar') || params.stage.isEmpty())
         {
@@ -115,13 +121,7 @@ def call(String pipeliType){
             } 
         }
         
-         if(env.GIT_BRANCH == 'develop'){
-            figlet 'gitCreateRelease'
-            bat "git checkout -b release"
-            bat "git add ."
-            bat "git commit -m 'se agregar nueva rama'"
-            bat "git push origin release" 
-        }
+         
 
 
 
