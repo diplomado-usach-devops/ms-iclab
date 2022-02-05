@@ -83,7 +83,7 @@ def call(String pipeliType){
                 }
         }
         
-         if(params.builTools == 'develop'){
+         if(env.GIT_BRANCH == 'develop'){
             figlet 'develop 1.0'
         }
         
