@@ -29,7 +29,7 @@ def call(String pipeliType){
     env.GIT_REPO_NAME = env.GIT_URL.replaceFirst(/^.*\/([^\/]+?).git$/, '$1')
     
     
-    def ejecucion_sonar = env.GIT_REPO_NAME +"-"+ env.GIT_BRANCH + "/" + env.BUILD_NUMBER
+    def ejecucion_sonar = env.GIT_REPO_NAME +"-"+ env.GIT_BRANCH + "-" + env.BUILD_NUMBER
     
     
     figlet params.builTools
