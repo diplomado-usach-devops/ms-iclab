@@ -80,7 +80,7 @@ def call(String pipeliType){
                     figlet 'SonarQube'
                     def scannerHome = tool 'sonar-scanner';
                     withSonarQubeEnv('sonar-server') { 
-                        bat "${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=prueba -Dsonar.sources=src -Dsonar.java.binaries=build " 
+                        bat "${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=${ejecucion_sonar} -Dsonar.sources=src -Dsonar.java.binaries=build " 
                     }           
             }
         }
