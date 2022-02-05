@@ -32,7 +32,7 @@ def call(String pipeliType){
     figlet params.builTools
     figlet env.GIT_REPO_NAME
     figlet env.BUILD_NUMBER
-    figlet env.GIT_LOCAL_BRANCH
+    figlet env.BRANCH_NAME
     figlet env.GIT_BRANCH
     //println bandera
     figlet pipeliType
