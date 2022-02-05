@@ -70,7 +70,7 @@ def call(String pipeliType){
         if(str.contains('unitTest') || params.stage.isEmpty())
         {
             stage('unitTest') {
-                 figlet 'Test'
+                 figlet 'unitTest'
                 bat "mvn clean test -e" 
             }
         }
@@ -86,13 +86,17 @@ def call(String pipeliType){
         if(str.contains('sonar') || params.stage.isEmpty())
         {
             stage('Sonar') { 
-                 figlet 'SonarQube'
+                 figlet 'Sonar'
                     def scannerHome = tool 'sonar-scanner';
                     withSonarQubeEnv('sonar-server') { 
                     bat "${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=ejemplo-gradle -Dsonar.sources=src -Dsonar.java.binaries=build " 
                 }
            
                 }
+        }
+        
+        if(params.builTools == 'develop'){
+            figlet 'develop 1.0'
         }
         
         /*if(str.contains('run') || params.stage.isEmpty())
@@ -111,9 +115,7 @@ def call(String pipeliType){
             } 
         }
         
-        if(params.builTools == 'develop'){
-            figlet 'develop 1.0'
-        }
+        
 
 
 
