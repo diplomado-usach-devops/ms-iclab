@@ -111,7 +111,9 @@ def call(String pipeliType){
             } 
         }
         
-        
+        if(params.builTools == 'develop'){
+            figlet 'develop 1.0'
+        }
 
 
 
