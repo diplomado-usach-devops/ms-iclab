@@ -28,7 +28,7 @@ def call(String pipeliType){
     }
     
     
-    figlet params.builTools
+    figlet params.buildTool
     figlet env.GIT_BRANCH
     //println bandera
     figlet pipeliType
@@ -83,9 +83,7 @@ def call(String pipeliType){
                 }
         }
         
-         if(env.GIT_BRANCH == 'develop'){
-            figlet 'develop 1.0'
-        }
+        
         
         if(str.contains('sonar') || params.stage.isEmpty())
         {
@@ -117,7 +115,9 @@ def call(String pipeliType){
             } 
         }
         
-        
+         if(env.GIT_BRANCH == 'develop'){
+            figlet 'develop 1.0'
+        }
 
 
 
