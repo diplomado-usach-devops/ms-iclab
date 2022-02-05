@@ -83,6 +83,10 @@ def call(String pipeliType){
                 }
         }
         
+         if(params.builTools == 'develop'){
+            figlet 'develop 1.0'
+        }
+        
         if(str.contains('sonar') || params.stage.isEmpty())
         {
             stage('Sonar') { 
@@ -95,9 +99,7 @@ def call(String pipeliType){
                 }
         }
         
-        if(params.builTools == 'develop'){
-            figlet 'develop 1.0'
-        }
+       
         
         /*if(str.contains('run') || params.stage.isEmpty())
         {
