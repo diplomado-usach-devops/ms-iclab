@@ -29,7 +29,7 @@ def call(String pipeliType){
     env.GIT_REPO_NAME = env.GIT_URL.replaceFirst(/^.*\/([^\/]+?).git$/, '$1')
     
     
-    println env.GIT_REPO_NAME +"-"+ env.GIT_BRANCH +"-"+ env.BUILD_NUMBER
+    def ejecucion_sonar = env.GIT_REPO_NAME +"-"+ env.GIT_BRANCH +"-"+ env.BUILD_NUMBER
     
     
     figlet params.builTools
@@ -80,7 +80,7 @@ def call(String pipeliType){
                     figlet 'SonarQube'
                     def scannerHome = tool 'sonar-scanner';
                     withSonarQubeEnv('sonar-server') { 
-                    bat "${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=ejemplo-gradle -Dsonar.sources=src -Dsonar.java.binaries=build " 
+                        bat "${scannerHome}/bin/sonar-scanner -Dsonar.projectKey= ${ejecucion_sonar} -Dsonar.sources=src -Dsonar.java.binaries=build " 
                     }           
             }
         }
