@@ -26,7 +26,11 @@ def call(String pipeliType){
                 break
         }   
     }
+    env.GIT_REPO_NAME = env.GIT_URL.replaceFirst(/^.*\/([^\/]+?).git$/, '$1') 
+    
+    
     figlet params.builTools
+    figlet env.GIT_REPO_NAME
     figlet env.BUILD_NUMBER
     figlet env.GIT_BRANCH
     //println bandera
