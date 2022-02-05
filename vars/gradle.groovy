@@ -64,6 +64,7 @@ def call(String pipeliType){
     
     }
     else {
+        input 'Aprobacion para despliegue en Produccion'
         if(bandera){
         if(str.contains('build') || params.stage.isEmpty() )
         {   
