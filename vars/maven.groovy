@@ -13,12 +13,11 @@ def call(String pipeliType){
     def bandera = true
     for (int i = 0; i < str.size(); i++) {
         switch(str[0]) {
-            case "compile":        
-            case "sonar":
-            case "test":
-            case "code":
-            case "run":
-            case "nexus":
+            case "unitTest":
+            case "jar":
+            case "sonar":           
+            case "nexusUpload":
+            case "gitCreateRelease":
             case "":
                 bandera = true
           
@@ -60,15 +59,33 @@ def call(String pipeliType){
     if(bandera){
         if(str.contains('compile') || params.stage.isEmpty() )
         {   
-            stage('Compile Code') {  
-                figlet 'Compile Code'
+            stage('Compile') {  
+                figlet 'Compile'
                         bat "mvn clean compile -e"
                 }
         }
 
+        
+
+        if(str.contains('unitTest') || params.stage.isEmpty())
+        {
+            stage('unitTest') {
+                 figlet 'Test'
+                bat "mvn clean test -e" 
+            }
+        }
+        
+        if(str.contains('code') || params.stage.isEmpty())
+        {
+            stage('Jar') {
+                 figlet 'Jar'
+                            bat "mvn clean package -e"            
+                }
+        }
+        
         if(str.contains('sonar') || params.stage.isEmpty())
         {
-            stage('SonarQube analysis') { 
+            stage('Sonar') { 
                  figlet 'SonarQube'
                     def scannerHome = tool 'sonar-scanner';
                     withSonarQubeEnv('sonar-server') { 
@@ -77,38 +94,24 @@ def call(String pipeliType){
            
                 }
         }
-
-        if(str.contains('test') || params.stage.isEmpty())
-        {
-            stage('Test Code') {
-                 figlet 'Test Code'
-                bat "mvn clean test -e" 
-            }
-        }
         
-        if(str.contains('code') || params.stage.isEmpty())
-        {
-            stage('Jar Code') {
-                 figlet 'Jar Code'
-                            bat "mvn clean package -e"            
-                }
-        }
-        
-        if(str.contains('run') || params.stage.isEmpty())
+        /*if(str.contains('run') || params.stage.isEmpty())
         {
              stage('Run Jar') { 
                   figlet 'Run Jar'
                             bat "start /min mvn spring-boot:run &"           
                 }
-        }
+        }*/
 
-        if(str.contains('nexus') || params.stage.isEmpty())
+        if(str.contains('nexusUpload') || params.stage.isEmpty())
         {
-            stage('Nexus') {
+            stage('nexusUpload') {
                  figlet 'Nexus Upload'
                 bat "curl -v --user admin:123456 --upload-file C:/Users/nmt02/.jenkins/workspace/pipilene_sonar_feature-sonar/build/DevOpsUsach2020-0.0.1.jar http://7fb6-186-79-184-102.ngrok.io/repository/test-repo/com/devopsusach2020/DevOpsUsach2020/0.0.1/DevOpsUsach2020-0.0.1.jar "            
             } 
         }
+        
+        
 
 
 
