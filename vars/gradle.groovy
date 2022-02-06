@@ -74,7 +74,7 @@ def call(String pipeliType){
                 bat "gradle Build"
             }
         }
-/*
+
         if(str.contains('sonar') || params.stage.isEmpty())
         {
             stage('SonarQube analysis') { 
@@ -93,7 +93,7 @@ def call(String pipeliType){
                 bat "gradle bootRun "           
             }
         }
-*/
+
         if(str.contains('nexus') || params.stage.isEmpty())
         {
             stage('Nexus') {  
