@@ -37,8 +37,8 @@ def call(String pipeliType){
     
     figlet "github"
     stage('Checkout code') {        
-            def git = new helpers.Git()
-            git.remote
+           
+            bat "git remote -v"
     }
     
     if(pipeliType == 'CD')
