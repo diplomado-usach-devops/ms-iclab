@@ -1,3 +1,5 @@
+import helpers.*
+
 /*
     forma de invocación de método call:
     def ejecucion = load 'script.groovy'
