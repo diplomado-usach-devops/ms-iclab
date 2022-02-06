@@ -36,7 +36,10 @@ def call(String pipeliType){
     figlet "github"
     stage('Checkout code') {        
             checkout scm
-            bat "git remote -v"
+            bat "git checkout -b 'feature-prueba'"
+            bat "git add ."
+            bat "git commit -m 'nueva rama'"
+            bat "git push origin feature-prueba"
     }
     
     if(pipeliType == 'CD')
