@@ -94,9 +94,8 @@ def call(String pipeliType){
         if(env.GIT_BRANCH == 'develop'){
             figlet 'gitCreateRelease'
           
-            bat "git checkout -b p21"
-            bat "git fetch origin p21"
-            bat "git merge origin/p21"
+            bat "git checkout -b p22"            
+            bat "git push -u origin p22"
            
         }
         
