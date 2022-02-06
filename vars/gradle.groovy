@@ -41,8 +41,7 @@ def call(String pipeliType){
          }       
 
         stage('Test Code') { 
-               figlet 'TestBuild'
-               bat "gradle clean"
+               figlet 'TestBuild'              
                bat "gradle Build"
         }       
         
@@ -60,8 +59,7 @@ def call(String pipeliType){
         if(str.contains('build') || params.stage.isEmpty() )
         {   
             stage('TestBuild') { 
-                figlet 'TestBuild'
-                 bat "gradle clean"
+                figlet 'TestBuild'                
                 bat "gradle Build"
             }
         }
