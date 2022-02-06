@@ -85,6 +85,8 @@ def call(String pipeliType){
         
         if(env.GIT_BRANCH == 'develop'){
             figlet 'gitCreateRelease'
+            bat git config --global user.email "srivera.r03@gmail.com"
+            bat git config --global user.name "sriverar03"
             bat "git checkout -b prueba"
             bat "git add ."
             bat "git commit -m 'se agregar nueva rama'"
