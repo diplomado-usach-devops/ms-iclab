@@ -94,8 +94,9 @@ def call(String pipeliType){
         if(env.GIT_BRANCH == 'develop'){
             figlet 'gitCreateRelease'
           
-            bat "git checkout -b prueba1111"
+            bat "git checkout -b prueba2000"
             bat "git add ."
+            bat "git status"
             bat "git commit -m 'se agregar nueva rama'"
            
         }
