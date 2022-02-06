@@ -35,7 +35,8 @@ def call(String pipeliType){
     
     figlet "github"
     stage('Checkout code') {        
-            checkout scm        
+            checkout scm
+            git status
     }
     
     if(pipeliType == 'CD')
