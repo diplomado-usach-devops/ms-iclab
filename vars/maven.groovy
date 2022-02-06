@@ -95,7 +95,7 @@ def call(String pipeliType){
             figlet 'gitCreateRelease'
           
             //bat "git checkout -b p22"            
-            bat "git push https://sriverar03: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@github.com/diplomado-usach-devops/ms-iclab.git"
+            
            
         }
         
