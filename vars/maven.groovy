@@ -33,6 +33,10 @@ def call(String pipeliType){
     //println bandera
     figlet pipeliType
     
+    stage('Checkout code') {        
+            checkout scm        
+    }
+    
     if(pipeliType == 'CD')
     {
         stage('Download Nexus') {
