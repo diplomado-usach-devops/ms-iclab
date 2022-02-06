@@ -33,6 +33,7 @@ def call(String pipeliType){
     //println bandera
     figlet pipeliType
     
+    figlet "github"
     stage('Checkout code') {        
             checkout scm        
     }
