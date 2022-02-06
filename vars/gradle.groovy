@@ -42,6 +42,7 @@ def call(String pipeliType){
 
         stage('Test Code') { 
                figlet 'TestBuild'
+               bat "gradle clean"
                bat "gradle Build"
         }       
         
@@ -60,6 +61,7 @@ def call(String pipeliType){
         {   
             stage('TestBuild') { 
                 figlet 'TestBuild'
+                 bat "gradle clean"
                 bat "gradle Build"
             }
         }
