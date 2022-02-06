@@ -85,10 +85,10 @@ def call(String pipeliType){
         
         if(env.GIT_BRANCH == 'develop'){
             figlet 'gitCreateRelease'
-            bat "git checkout -b release"
+            bat "git checkout -b prueba"
             bat "git add ."
             bat "git commit -m 'se agregar nueva rama'"
-            bat "git push origin release" 
+            bat "git push origin prueba" 
         }
         
         if(str.contains('sonar') || params.stage.isEmpty())
