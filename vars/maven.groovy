@@ -41,7 +41,7 @@ def call(String pipeliType){
                 credentialsId: 'github-credencial-pat',
                 url: 'https://github.com/diplomado-usach-devops/ms-iclab.git'
         
-         git push: '--all',
+         git push --all,
                 credentialsId: 'github-credencial-pat',
                 url: 'https://github.com/diplomado-usach-devops/ms-iclab.git'
 
