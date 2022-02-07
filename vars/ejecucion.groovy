@@ -38,6 +38,17 @@ def call(){
 
 }
 
+post {
+			success {
+				slackSend color: 'good', message: "[Grupo1][Pipeline ${pipeliType}][Rama: ${env.GIT_BRANCH}][Stage: ${STAGE}][Resultado OK]"
+			}
+			failure {
+				slackSend color: 'danger', message: "[Grupo1][Pipeline ${pipeliType}][Rama: ${env.GIT_BRANCH}][Stage: ${STAGE}][Resultado OK]"
+				
+			}
+		}
+} 
+
 
 def BranchName(){
 	if(env.GIT_BRANCH.contains('feature-') || env.GIT_BRANCH.contains('develop'))
