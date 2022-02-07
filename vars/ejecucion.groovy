@@ -37,7 +37,7 @@ def call(){
 }
 
 }
-
+/*
 post {
 			success {
 				slackSend color: 'good', message: "[Grupo1][Pipeline ${pipeliType}][Rama: ${env.GIT_BRANCH}][Stage: ${STAGE}][Resultado OK]"
@@ -47,7 +47,7 @@ post {
 				
 			}
 		}
-} 
+} */
 
 
 def BranchName(){
