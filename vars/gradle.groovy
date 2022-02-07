@@ -90,7 +90,7 @@ def call(String pipeliType){
         {
             stage('Run') { 
                 figlet 'Run'
-                bat "gradle run "           
+                bat "gradle bootRun "           
             }
         }
 
