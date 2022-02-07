@@ -37,8 +37,11 @@ def call(String pipeliType){
     
     figlet "github"
     stage('Checkout code') {        
-           bat "git remote -v"
-            bat "git push --all"
+           git branch: 'feature-gradle',
+                credentialsId: 'github-credencial-pat',
+                url: 'https://github.com/diplomado-usach-devops/ms-iclab.git'
+
+            bat "ls -lat"
     }
     
     if(pipeliType == 'CD')
