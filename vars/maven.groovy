@@ -42,7 +42,7 @@ def call(String pipeliType){
                 credentialsId: 'github-credencial-pat',
                 url: 'https://github.com/diplomado-usach-devops/ms-iclab.git'
         
-          ls -an
+          
 
            
     }
