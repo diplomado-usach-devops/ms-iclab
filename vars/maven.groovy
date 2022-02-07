@@ -1,4 +1,4 @@
-import helpers.*
+
 
 /*
     forma de invocación de método call:
@@ -36,12 +36,13 @@ def call(String pipeliType){
     figlet pipeliType
     
     figlet "github"
-    stage('Checkout code') {        
+    stage('Checkout code') { 
+        
            git branch: 'feature-gradle',
                 credentialsId: 'github-credencial-pat',
                 url: 'https://github.com/diplomado-usach-devops/ms-iclab.git'
         
-          git push --all origin
+          ls -an
 
            
     }
