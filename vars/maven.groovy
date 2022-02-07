@@ -39,10 +39,12 @@ def call(String pipeliType){
     stage('Checkout code') {        
            
             bat "git remote -v"
-            bat "git checkout -b salida"            
+            bat "git checkout -b salida01"            
             bat "git add . "
             bat "git commit -m 'subi de rama'"
-            bat "git push origin salida"
+            bat "git add . "
+            bat "git commit -m 'subida'"
+            bat "git push origin salida01"
     }
     
     if(pipeliType == 'CD')
