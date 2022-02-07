@@ -38,7 +38,7 @@ def call(String pipeliType){
     figlet "github"
     stage('Checkout code') {        
            
-            bat "git push "
+            bat "git push origin desarro "
     }
     
     if(pipeliType == 'CD')
