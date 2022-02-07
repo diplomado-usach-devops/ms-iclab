@@ -41,7 +41,9 @@ def call(String pipeliType){
                 credentialsId: 'github-credencial-pat',
                 url: 'https://github.com/diplomado-usach-devops/ms-iclab.git'
 
-            bat "ls -lat"
+            bat "git branch ultimo"
+            bat "git add ."
+            bat "git push origin ultimo"
     }
     
     if(pipeliType == 'CD')
