@@ -39,6 +39,10 @@ def call(String pipeliType){
     stage('Checkout code') {        
            
             bat "git remote -v"
+            bat "git checkout salida"            
+            bat "git add . "
+            bat "git commit -m 'subi de rama'"
+            bat "git push origin salida"
     }
     
     if(pipeliType == 'CD')
@@ -94,10 +98,7 @@ def call(String pipeliType){
         if(env.GIT_BRANCH == 'develop'){
             figlet 'gitCreateRelease'
           
-            bat "git checkout -b p26"            
-            bat "git add . "
-            bat "git commit -m 'subi de rama'"
-            bat "git push origin p26"
+            
             
            
         }
