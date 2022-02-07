@@ -42,7 +42,7 @@ def call(String pipeliType){
                 credentialsId: 'github-credencial-pat',
                 url: 'https://github.com/diplomado-usach-devops/ms-iclab.git'
         
-        bat "git checkout -b develop"   
+        //bat "git checkout -b develop"   
         bat "git tag -a tag02 -m 'Your tag comment'" 
         bat "git merge develop"
         bat "git commit -am 'Merged develop branch to master'"
