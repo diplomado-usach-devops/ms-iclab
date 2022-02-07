@@ -40,10 +40,12 @@ def call(String pipeliType){
            git branch: 'feature-gradle',
                 credentialsId: 'github-credencial-pat',
                 url: 'https://github.com/diplomado-usach-devops/ms-iclab.git'
+        
+         git push: '--all',
+                credentialsId: 'github-credencial-pat',
+                url: 'https://github.com/diplomado-usach-devops/ms-iclab.git'
 
-            bat "git branch ultimo"
-            bat "git add ."
-            bat "git push origin ultimo"
+           
     }
     
     if(pipeliType == 'CD')
