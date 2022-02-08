@@ -131,8 +131,8 @@ def call(String pipeliType){
             bat "git checkout -b release-${env.BUILD_NUMBER}"   
         //bat "git tag -a tag10 -m 'Your tag comment'" 
         bat "git add ."
-        //bat "git commit -m 'release creado  ${env.BUILD_NUMBER}'" 
-        //bat "git push origin feature-gradle"    
+        bat "git commit -m 'release creado  ${env.BUILD_NUMBER}'" 
+        bat "git push origin release-${env.BUILD_NUMBER}"    
           
             
             
