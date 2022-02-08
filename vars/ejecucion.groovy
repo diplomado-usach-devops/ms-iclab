@@ -34,11 +34,8 @@ def call(){
 		}		
 		
 	}
-}
 
-}
-
-post {
+	  post {
 	
 	
 			success {
@@ -49,7 +46,13 @@ post {
 				
 			}
 		
-} 
+		} 
+	  
+	}
+
+}
+
+
 
 
 def BranchName(){
