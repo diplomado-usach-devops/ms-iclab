@@ -115,7 +115,7 @@ def call(String pipeliType){
         {
             stage('nexusUpload') {
                  figlet 'Nexus Upload'
-                bat "curl -v --user admin:123456 --upload-file C:/Users/nmt02/.jenkins/workspace/pipilene_sonar_feature-sonar/build/DevOpsUsach2020-0.0.1.jar http://7fb6-186-79-184-102.ngrok.io/repository/test-repo/com/devopsusach2020/DevOpsUsach2020/0.0.1/DevOpsUsach2020-0.0.1.jar "            
+                bat "curl -v --user admin:123456 --upload-file C:/Users/nmt02/.jenkins/workspace/Laboratorio_Final/pipeline-release/build/libs/pipeline-release-0.0.1.jar http://localhost:8081/repository/lab-m3/com/pipeline-release/pipeline-release/0.0.1/pipeline-release-0.0.1.jar "
             } 
         }
         
