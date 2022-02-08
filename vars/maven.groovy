@@ -102,7 +102,7 @@ def call(String pipeliType){
                 url: 'https://github.com/diplomado-usach-devops/ms-iclab.git'
         bat "git pull --rebase" 
         //bat "git checkout -b develop"   
-        bat "git tag -a tag07 -m 'Your tag comment'" 
+        bat "git tag -a tag08 -m 'Your tag comment'" 
         bat "git add ."
         bat "git commit -m 'mensaje de commit'" 
         bat "git push origin develop" 
