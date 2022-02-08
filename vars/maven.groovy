@@ -30,10 +30,10 @@ def call(String pipeliType){
     }
     
     
-    figlet "BuildTool :" + params.buildTool
-    figlet env.GIT_BRANCH
+    figlet "BuildTool :  " + params.buildTool
+    figlet "Rama :  " +env.GIT_BRANCH
    
-    figlet  pipeliType
+    figlet  "Tipo pipeline :  " +pipeliType
     
     
     
