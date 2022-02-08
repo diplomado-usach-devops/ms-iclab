@@ -129,13 +129,13 @@ def call(String pipeliType){
         
         if(env.GIT_BRANCH == 'develop'){
             figlet 'gitCreateRelease'
-            
+            bat "git fetch --all"
              git branch: 'feature-gradle',
                 credentialsId: 'github-credencial-pat',
                 url: 'https://github.com/diplomado-usach-devops/ms-iclab.git'
          bat "ls -an" 
             
-         bat "touch prueba12.txt" 
+         bat "touch prueba13.txt" 
         //bat "git checkout -b develop"   
         //bat "git tag -a tag10 -m 'Your tag comment'" 
         bat "git add ."
