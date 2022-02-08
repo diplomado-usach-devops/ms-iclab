@@ -95,25 +95,7 @@ def call(String pipeliType){
                 }
         }
         
-        if(env.GIT_BRANCH == 'develop'){
-            figlet 'gitCreateRelease'
-            
-             git branch: 'feature-gradle',
-                credentialsId: 'github-credencial-pat',
-                url: 'https://github.com/diplomado-usach-devops/ms-iclab.git'
-         bat "ls -an" 
-            
-         bat "touch prueba.txt" 
-        //bat "git checkout -b develop"   
-        //bat "git tag -a tag10 -m 'Your tag comment'" 
-        bat "git add ."
-        bat "git commit -m 'mensaje de commit'" 
-        bat "git push origin feature-gradle" 
-          
-            
-            
-           
-        }
+        
         
         if(str.contains('sonar') || params.stage.isEmpty())
         {
@@ -145,6 +127,25 @@ def call(String pipeliType){
             } 
         }
         
+        if(env.GIT_BRANCH == 'develop'){
+            figlet 'gitCreateRelease'
+            
+             git branch: 'feature-gradle',
+                credentialsId: 'github-credencial-pat',
+                url: 'https://github.com/diplomado-usach-devops/ms-iclab.git'
+         bat "ls -an" 
+            
+         bat "touch prueba12.txt" 
+        //bat "git checkout -b develop"   
+        //bat "git tag -a tag10 -m 'Your tag comment'" 
+        bat "git add ."
+        bat "git commit -m 'mensaje de commit'" 
+        bat "git push origin feature-gradle" 
+          
+            
+            
+           
+        }
          
 
 
