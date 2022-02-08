@@ -98,7 +98,7 @@ def call(String pipeliType){
         {
             stage('Nexus') {  
                 figlet 'Nexus'
-                bat "curl -v --user admin:123456 --upload-file C:/Users/nmt02/.jenkins/workspace/Laboratorio_Final/pipeline-release/build/libs/pipeline-release-0.0.1.jar http://localhost:8081/repository/lab-m3/com/pipeline-release/pipeline-release/0.0.1/pipeline-release-0.0.1.jar "            
+                bat "curl -v --user admin:123456 --upload-file C:/Users/nmt02/.jenkins/workspace/Laboratorio_Final/pipeline-release/build/libs/DevOpsUsach2020-0.0.1.jar http://localhost:8081/repository/lab-m3/com/pipeline-release/pipeline-release/0.0.1/pipeline-release-0.0.1.jar "            
             } 
         }
 
