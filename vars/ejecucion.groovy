@@ -48,7 +48,7 @@ post {
 				slackSend color: 'danger', message: "[Grupo1][Pipeline prueba2][Rama: ${env.GIT_BRANCH}][Stage: ${STAGE}][Resultado No OK]"
 				
 			}
-		}
+		
 } 
 
 
