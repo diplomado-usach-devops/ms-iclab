@@ -86,13 +86,13 @@ def call(String pipeliType){
             }
         }
 
-        if(str.contains('run') || params.stage.isEmpty())
+    /*    if(str.contains('run') || params.stage.isEmpty())
         {
             stage('Run') { 
                 figlet 'Run'
                 bat "gradle bootRun "           
             }
-        }
+        }*/
 
         if(str.contains('nexus') || params.stage.isEmpty())
         {
