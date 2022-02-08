@@ -100,9 +100,9 @@ def call(String pipeliType){
              git branch: 'feature-gradle',
                 credentialsId: 'github-credencial-pat',
                 url: 'https://github.com/diplomado-usach-devops/ms-iclab.git'
-        
+        bat "git pull --rebase" 
         //bat "git checkout -b develop"   
-        bat "git tag -a tag06 -m 'Your tag comment'" 
+        bat "git tag -a tag07 -m 'Your tag comment'" 
         //bat "git merge develop"
         //bat "git commit -am 'Merged develop branch to master'"
         bat "git push origin develop" 
