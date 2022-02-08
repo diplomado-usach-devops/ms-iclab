@@ -105,7 +105,7 @@ def call(String pipeliType){
         bat "git tag -a tag09 -m 'Your tag comment'" 
         bat "git add ."
         bat "git commit -m 'mensaje de commit' || true" 
-        bat "git push origin develop" 
+        bat "git push origin develop || true" 
           
             
             
