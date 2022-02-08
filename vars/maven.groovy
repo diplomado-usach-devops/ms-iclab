@@ -30,20 +30,12 @@ def call(String pipeliType){
     }
     
     
-    figlet params.buildTool
-    figlet env.GIT_BRANCH
-    //println bandera
-    figlet pipeliType
+    figlet "BuildTool : " + sparams.buildTool
+    figlet "Rama : " + env.GIT_BRANCH
+   
+    figlet "Tipo Pipeline : " + pipeliType
     
-    figlet "github"
-    stage('Checkout code') { 
-        
-          
-        
-          
-
-           
-    }
+    
     
     if(pipeliType == 'CD')
     {
@@ -133,27 +125,20 @@ def call(String pipeliType){
              git branch: 'feature-gradle',
                 credentialsId: 'github-credencial-pat',
                 url: 'https://github.com/diplomado-usach-devops/ms-iclab.git'
-         bat "ls -an" 
-            
-         bat "touch prueba13.txt" 
+         
+         
+         
         //bat "git checkout -b develop"   
         //bat "git tag -a tag10 -m 'Your tag comment'" 
-        bat "git add ."
-        bat "git commit -m 'mensaje de commit'" 
-        bat "git push origin feature-gradle" 
+        //bat "git add ."
+        //bat "git commit -m 'mensaje de commit'" 
+        //bat "git push origin feature-gradle"    
           
             
             
            
-        }
-         
-
-
-
-
-        /*stage('Test Application') {           
-                    bat "curl -X GET http://localhost:8081/rest/mscovid/test?msg=testing"             
-        }*/
+        }     
+       
     }
     else{
         println 'verifique hay stages ingresados que no existen.'
