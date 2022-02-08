@@ -97,15 +97,18 @@ def call(String pipeliType){
         
         if(env.GIT_BRANCH == 'develop'){
             figlet 'gitCreateRelease'
+            
              git branch: 'feature-gradle',
                 credentialsId: 'github-credencial-pat',
                 url: 'https://github.com/diplomado-usach-devops/ms-iclab.git'
-        bat "git pull --rebase" 
+         bat "ls -an" 
+            
+        //bat "git pull --rebase" 
         //bat "git checkout -b develop"   
-        bat "git tag -a tag10 -m 'Your tag comment'" 
-        bat "git add ."
-        bat "git commit -m 'mensaje de commit' || true" 
-        bat "git push origin develop || true" 
+        //bat "git tag -a tag10 -m 'Your tag comment'" 
+        //bat "git add ."
+        //bat "git commit -m 'mensaje de commit' || true" 
+        //bat "git push origin develop || true" 
           
             
             
