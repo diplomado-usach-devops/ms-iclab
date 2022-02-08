@@ -103,13 +103,13 @@ def call(String pipeliType){
         
        
         
-        if(str.contains('run') || params.stage.isEmpty())
+       /* if(str.contains('run') || params.stage.isEmpty())
         {
              stage('Run Jar') { 
                   figlet 'Run Jar'
                             bat "start /min mvn spring-boot:run &"           
                 }
-        }
+        }*/
 
         if(str.contains('nexusUpload') || params.stage.isEmpty())
         {
