@@ -103,8 +103,8 @@ def call(String pipeliType){
         bat "git pull --rebase" 
         //bat "git checkout -b develop"   
         bat "git tag -a tag07 -m 'Your tag comment'" 
-        //bat "git merge develop"
-        //bat "git commit -am 'Merged develop branch to master'"
+        bat "git add ."
+        bat "git commit -m 'mensaje de commit'" 
         bat "git push origin develop" 
           
             
