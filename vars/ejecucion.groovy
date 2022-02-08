@@ -36,13 +36,13 @@ def call(){
 	}
 
 	  post {
-	
+			def pipe = BranchName()
 	
 			success {
-				slackSend color: 'good', message: "[Grupo1][Pipeline prueba1][Rama: ${env.GIT_BRANCH}][Stage: ${STAGE}][Resultado OK]"
+				slackSend color: 'good', message: "[Grupo1][Pipeline $pipe][Rama: ${scm.branches[0].name}][Stage: ${STAGE}][Resultado OK]"
 			}
 			failure {
-				slackSend color: 'danger', message: "[Grupo1][Pipeline prueba2][Rama: ${env.GIT_BRANCH}][Stage: ${STAGE}][Resultado No OK]"
+				slackSend color: 'danger', message: "[Grupo1][Pipeline $pipe][Rama: ${scm.branches[0].name}][Stage: ${STAGE}][Resultado No OK]"
 				
 			}
 		
